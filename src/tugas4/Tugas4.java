@@ -176,35 +176,20 @@ public class Tugas4 {
                     if(pokemonChilds.get(i).getElemen().equals("api")){
                         isOwnFire = true;
                         System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
+                        if(tam == 1){
+                            System.out.println("Melakukan Kegiatan meloncat");
+                        }
+                        else if(tam == 2){
+                            System.out.println("Melakukan Kegiatan berlari");
+                        }
                     }
                 }
                 
-                if(tam==1){
-                     for (int i = 0; i < pokemonChilds.size(); i++) {
-                    if(pokemonChilds.get(i).getElemen().equals("api")){
-                        isOwnFire = true;
-                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
-                        System.out.println("sedang melompat");
-                    }
-                
-                }
-              }
-                if(tam==2){
-                 for (int i = 0; i < pokemonChilds.size(); i++) {
-                    if(pokemonChilds.get(i).getElemen().equals("api")){
-                        isOwnFire = true;
-                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
-                        System.out.println("sedang berlari");
-                    }
-                 }
- 
-              }
                 
                 if(!isOwnFire){
                     System.out.println("Tidak Punya");
                 }
-
-           }
+            }
 
             if(menu==2){
                 
