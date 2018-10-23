@@ -13,6 +13,7 @@ public class Charmander extends Pokemon {
     private boolean atraksi;
     private String elemen = "api";
     
+    
     public Charmander(String nama, int level, int umur) {
         super(level, umur, nama);
     }

@@ -15,15 +15,93 @@ import java.util.Scanner;
  */
 public class Tugas4 {
     
-    public static void cetak(ArrayList arr,String elemen){
+    public static void cetak(ArrayList arr,String elemen, String jenis){
        switch(elemen){
-           case "api":
+            case "api":
                for (int i = 0; i < arr.size(); i++) {
-                   Charmander charmander = (Charmander)arr.get(i);
-                   System.out.println(charmander.getNama() + " " + charmander.getLevel() + " " + charmander.getUmur());
+                   if(jenis.equals("charmander")){
+                       Charmander charmander = (Charmander)arr.get(i);
+                       System.out.println(charmander.getNama() + " " + charmander.getLevel() + " " + charmander.getUmur());
+                   }
+                   else if(jenis.equals("vulpix")){
+                        Vulpix vulpix = (Vulpix)arr.get(i);
+                        System.out.println(vulpix.getNama() + " " + vulpix.getLevel() + " " + vulpix.getUmur());
+                   }
                }
-               break;
+            break;
+            case "air":
+               for (int i = 0; i < arr.size(); i++) {
+                   if(jenis.equals("squirtle")){
+                       Squirtle squirtle = (Squirtle)arr.get(i);
+                       System.out.println(squirtle.getNama() + " " + squirtle.getLevel() + " " + squirtle.getUmur());
+                   }
+                   else if(jenis.equals("magikarp")){
+                        Magikarp magikarp = (Magikarp)arr.get(i);
+                        System.out.println(magikarp.getNama() + " " + magikarp.getLevel() + " " + magikarp.getUmur());
+                   }
+               }
+            break;
+             case "rumput":
+               for (int i = 0; i < arr.size(); i++) {
+                   if(jenis.equals("bulbasaur")){
+                       Bulbasaur bulbasaur = (Bulbasaur)arr.get(i);
+                       System.out.println(bulbasaur.getNama() + " " + bulbasaur.getLevel() + " " + bulbasaur.getUmur());
+                   }
+                   else if(jenis.equals("chikorita")){
+                        Chikorita chikorita = (Chikorita)arr.get(i);
+                        System.out.println(chikorita.getNama() + " " + chikorita.getLevel() + " " + chikorita.getUmur());
+                   }
+               }
+            break;
+            case "evolusi":
+               for (int i = 0; i < arr.size(); i++) {
+                   if(jenis.equals("charmeleon")){
+                       Charmeleon charmeleon = (Charmeleon)arr.get(i);
+                       System.out.println(charmeleon.getNama() + " " + charmeleon.getLevel() + " " + charmeleon.getUmur());
+                   }
+                   else if(jenis.equals("ninetales")){
+                        Ninetales n = (Ninetales)arr.get(i);
+                        System.out.println(n.getNama() + " " + n.getLevel() + " " + n.getUmur());
+                   }
+                   else if(jenis.equals("wartortle")){
+                        Wartortle w = (Wartortle)arr.get(i);
+                        System.out.println(w.getNama() + " " + w.getLevel() + " " + w.getUmur());
+                   }
+                   else if(jenis.equals("gyarados")){
+                        Gyarados g = (Gyarados)arr.get(i);
+                        System.out.println(g.getNama() + " " + g.getLevel() + " " + g.getUmur());
+                   }
+               }
+            break;
+            
        }
+    }
+    
+    public static int ataraksi(ArrayList arr,String elemen, String jenis){
+        switch(elemen){
+            case "api":
+               int lead = -1;
+               for (int i = 0; i < arr.size(); i++) {
+                   if(jenis.equals("charmander")){
+                       Charmander charmander = (Charmander)arr.get(i);
+                       if(lead < charmander.getLevel()){
+                           lead = charmander.getLevel();
+                       }
+    //System.out.println(charmander.getNama() + " " + charmander.getLevel() + " " + charmander.getUmur());
+                   }
+                   else if(jenis.equals("vulpix")){
+                        Vulpix vulpix = (Vulpix)arr.get(i);
+                        if(lead < vulpix.getLevel()){
+                           lead = vulpix.getLevel();
+                       }
+//System.out.println(vulpix.getNama() + " " + vulpix.getLevel() + " " + vulpix.getUmur());
+                   }
+               }
+            break;
+       }
+        return 0;
+        
+       
     }
    
     /**
@@ -76,8 +154,8 @@ public class Tugas4 {
                     System.out.println("Tidak Ada");
                 }
                 else{
-                    cetak(c,"api");
-                    cetak(v,"api");
+                    cetak(c,"api","charmander");
+                    cetak(v,"api","vulpix");
                 }
                
               
@@ -528,8 +606,26 @@ public class Tugas4 {
                 System.out.println("4. Pertunjukkan Atraksi Evolusi");
                 lihat = s.nextInt();
                 
+                
+                
                 if(lihat==1){
+                    int lead = -1;
+                    Charmander charm;
+                    Vulpix ba;
+                    for (int i = 0; i < c.size(); i++) {
+                        if(lead < c.get(i).getLevel()){
+                            lead = c.get(i).getLevel();
+                            charm = c.get(i);
+                        }
+                    }
+                    for (int i = 0; i < v.size(); i++) {
+                        if(lead < v.get(i).getLevel()){
+                            lead = v.get(i).getLevel();
+                            ba = v.get(i);
+                        }
+                    }
                     
+                   
                 
                 }
                 
