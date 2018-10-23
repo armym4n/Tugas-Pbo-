@@ -128,6 +128,8 @@ public class Tugas4 {
         ArrayList<Ivysaur> ii = new ArrayList<Ivysaur>();
         ArrayList<Bayleef> bb = new ArrayList<Bayleef>();
         
+        ArrayList<Pokemonchild> pokemonChilds = new ArrayList<>();
+        
         int menu=0,uang=1000,hari=1;
         Random rnd = new Random();
         int acak = ((int)(Math.random()*2));
@@ -148,19 +150,61 @@ public class Tugas4 {
             menu=s.nextInt();
 //             c.add(new Charmander("Charmander",1,0));
 //             v.add(new Vulpix("Vulpix",1,0));
+
+            if(menu == 9){
+                //Cara add pokemon
+                pokemonChilds.add(new Pokemonchild(0, 0, "charmander","api"));
+                
+                //cetak pokemon sekarang
+                System.out.println("Sebelum Evolve : ");
+                for (int i = 0; i < pokemonChilds.size(); i++) {
+                    System.out.println(pokemonChilds.get(i).nama);
+                }
+                
+                //cetak ataksi sebelum evolve
+                pokemonChilds.get(0).atraksi();
+                
+                //cara evolve
+                pokemonChilds.get(0).evolve();
+                
+                //hasil evolve
+                System.out.println("Setelah Evolve : ");
+                System.out.println(pokemonChilds.get(0).nama);
+                
+                //cetak ataksi sesudah evolve
+                pokemonChilds.get(0).atraksi();
+                
+                
+                
+                System.out.println();
+            }
                     
             if(menu==1){
+                //Cetak yang baru
+                //cek untuk elemen 
+                boolean isOwnFire = false;
+                for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("api")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama);
+                    }
+                }
+                if(!isOwnFire){
+                    System.out.println("Tidak Punya");
+                }
+                
+                
                 if(c.size() <= 0 && v.size() <= 0){
-                    System.out.println("Tidak Ada");
+                    System.out.println("Abaikan");
                 }
                 else{
-                    cetak(c,"api","charmander");
-                    cetak(v,"api","vulpix");
+                    //cetak(c,"api","charmander");
+                    //cetak(v,"api","vulpix");
                 }
                
               
                if(Api.jumlah==0){
-                   System.out.println("tidak ada pokemon");
+                   System.out.println("Abaikan");
                    
                }
                else if(Api.jumlah == -15){
