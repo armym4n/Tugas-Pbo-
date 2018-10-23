@@ -71,38 +71,21 @@ public class Tugas4 {
                         Gyarados g = (Gyarados)arr.get(i);
                         System.out.println(g.getNama() + " " + g.getLevel() + " " + g.getUmur());
                    }
+                    else if(jenis.equals("ivysaur")){
+                        Ivysaur ii = (Ivysaur)arr.get(i);
+                        System.out.println(ii.getNama() + " " + ii.getLevel() + " " + ii.getUmur());
+                   }
+                    else if(jenis.equals("bayleef")){
+                        Bayleef bb = (Bayleef)arr.get(i);
+                        System.out.println(bb.getNama() + " " + bb.getLevel() + " " + bb.getUmur());
+                   }
                }
             break;
             
        }
     }
     
-    public static int ataraksi(ArrayList arr,String elemen, String jenis){
-        switch(elemen){
-            case "api":
-               int lead = -1;
-               for (int i = 0; i < arr.size(); i++) {
-                   if(jenis.equals("charmander")){
-                       Charmander charmander = (Charmander)arr.get(i);
-                       if(lead < charmander.getLevel()){
-                           lead = charmander.getLevel();
-                       }
-    //System.out.println(charmander.getNama() + " " + charmander.getLevel() + " " + charmander.getUmur());
-                   }
-                   else if(jenis.equals("vulpix")){
-                        Vulpix vulpix = (Vulpix)arr.get(i);
-                        if(lead < vulpix.getLevel()){
-                           lead = vulpix.getLevel();
-                       }
-//System.out.println(vulpix.getNama() + " " + vulpix.getLevel() + " " + vulpix.getUmur());
-                   }
-               }
-            break;
-       }
-        return 0;
-        
-       
-    }
+  
    
     /**
      * @param args the command line arguments
@@ -183,232 +166,197 @@ public class Tugas4 {
                 //Cetak yang baru
                 //cek untuk elemen 
                 boolean isOwnFire = false;
+                int tam = rnd.nextInt(2)+1;
                 for (int i = 0; i < pokemonChilds.size(); i++) {
                     if(pokemonChilds.get(i).getElemen().equals("api")){
                         isOwnFire = true;
-                        System.out.println(pokemonChilds.get(i).nama);
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
                     }
                 }
+                
+                if(tam==1){
+                     for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("api")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
+                        System.out.println("sedang melompat");
+                    }
+                
+                }
+              }
+                if(tam==2){
+                 for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("api")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
+                        System.out.println("sedang berlari");
+                    }
+                 }
+ 
+              }
+                
                 if(!isOwnFire){
                     System.out.println("Tidak Punya");
                 }
-                
-                
-                if(c.size() <= 0 && v.size() <= 0){
-                    System.out.println("Abaikan");
-                }
-                else{
-                    //cetak(c,"api","charmander");
-                    //cetak(v,"api","vulpix");
-                }
-               
-              
-               if(Api.jumlah==0){
-                   System.out.println("Abaikan");
-                   
-               }
-               else if(Api.jumlah == -15){
-                   int tam = rnd.nextInt(2)+1;
-                   if(c.size()<0 && v.size()<0){
-                       return;
-                   
-                   }
-                   
-                      for (int i = 0; i < c.size(); i++) {
-                          
-                        System.out.println(c.get(i).getNama()+"- LV."+c.get(i).getLevel()+"- "+c.get(i).getUmur()+"Hari");
-                             // System.out.println("sedang lompat");
-                          
-                          
-                        }
-                     
-                     for (int i = 0; i < v.size(); i++) {
-                        System.out.println(v.get(i).getNama()+"- LV."+v.get(i).getLevel()+"- "+v.get(i).getUmur()+"Hari");
-                        
-                        }
-                     
-                    if(tam==1){
-                        for (int i = 0; i < c.size(); i++) {
-                        System.out.println(c.get(0).getNama()+"- LV."+c.get(0).getLevel()+"- "+c.get(0).getUmur()+"Hari");
-                        System.out.println("sedang lompat");
-                        }
-                        
-                    }
-                    if(tam==2){
-                        for (int i = 0; i < v.size(); i++) {
-                        System.out.println(v.get(0).getNama()+"- LV."+v.get(0).getLevel()+"- "+v.get(0).getUmur()+"Hari");
-                        System.out.println("sedang menggaruk badan");
-                        }
-                    
-                 }
-               }
-              
-         }
+
+           }
+
             if(menu==2){
-                 if(Air.jumlah==0){
-                   System.out.println("tidak ada pokemon");
-               }
-               else{
-                   int tam = rnd.nextInt(2)+1;
-                   if(ss.size()<0 && m.size()<0){
-                       return;
-                   
-                   }
-                   
-                      for (int i = 0; i < ss.size(); i++) {
-                          
-                        System.out.println(ss.get(i).getNama()+"- LV."+ss.get(i).getLevel()+"- "+ss.get(i).getUmur()+"Hari");
-                             // System.out.println("sedang lompat");
-                          
-                          
-                        }
-                     
-                     for (int i = 0; i < m.size(); i++) {
-                        System.out.println(m.get(i).getNama()+"- LV."+m.get(i).getLevel()+"- "+v.get(i).getUmur()+"Hari");
-                        
-                        }
-                     
-                    if(tam==1){
-                        for (int i = 0; i < ss.size(); i++) {
-                        System.out.println(ss.get(i).getNama()+"- LV."+ss.get(i).getLevel()+"- "+ss.get(i).getUmur()+"Hari");
-                        System.out.println("sedang lompat");
-                        }
-                        
+                
+                 boolean isOwnFire = false;
+                int tem = rnd.nextInt(2)+1;
+                for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("air")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
                     }
-                    if(tam==2){
-                        for (int i = 0; i < m.size(); i++) {
-                        System.out.println(m.get(i).getNama()+"- LV."+m.get(i).getLevel()+"- "+m.get(i).getUmur()+"Hari");
-                        System.out.println("sedang menggaruk badan");
-                        }
-                    
+                }
+                
+                if(tem==1){
+                     for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("air")){
+                        
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
+                        System.out.println("sedang berenang");
+                    }
+                
+                }
+              }
+                if(tem==2){
+                 for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("air")){
+                        
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
+                        System.out.println("sedang berjemur");
+                    }
                  }
-               }
-            
+ 
+              }
+                
+                if(!isOwnFire){
+                    System.out.println("Tidak Punya");
+                }
+
+
             }
             
             if(menu==3){
-                 if(Rumput.jumlah<0){
-                   System.out.println("tidak ada pokemon");
-               }
-               else{
-                   int tam = rnd.nextInt(2)+1;
-                   if(b.size()<0 && cc.size()<0){
-                       return;
-                   
-                   }
-                   
-                      for (int i = 0; i < b.size(); i++) {
-                          
-                        System.out.println(b.get(i).getNama()+"- LV."+b.get(i).getLevel()+"- "+b.get(i).getUmur()+"Hari");
-                             // System.out.println("sedang lompat");
-                          
-                          
-                        }
-                     
-                     for (int i = 0; i < cc.size(); i++) {
-                        System.out.println(cc.get(i).getNama()+"- LV."+cc.get(i).getLevel()+"- "+cc.get(i).getUmur()+"Hari");
-                        
-                        }
-                     
-                    if(tam==1){
-                        for (int i = 0; i < b.size(); i++) {
-                        System.out.println(b.get(i).getNama()+"- LV."+b.get(i).getLevel()+"- "+b.get(i).getUmur()+"Hari");
-                        System.out.println("sedang lompat");
-                        }
-                        
+             boolean isOwnFire = false;
+                int tem = rnd.nextInt(2)+1;
+                for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("rumput")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
                     }
-                    if(tam==2){
-                        for (int i = 0; i < cc.size(); i++) {
-                        System.out.println(cc.get(i).getNama()+"- LV."+cc.get(i).getLevel()+"- "+cc.get(i).getUmur()+"Hari");
+                }
+                
+                if(tem==1){
+                     for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("rumput")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
                         System.out.println("sedang makan");
-                        }
-                    
+                    }
+                
+                }
+              }
+                if(tem==2){
+                 for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("rumput")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
+                        System.out.println("sedang berlari");
+                    }
                  }
-               }
+ 
+              }
+                
+                if(!isOwnFire){
+                    System.out.println("Tidak Punya");
+                }
+
+
             
             }
             
             if(menu==4){
-                 if(Evolusi.jumlah==0){
-                   System.out.println("tidak ada pokemon");
-               }
-               else{
-                   int tam = rnd.nextInt(7)+1;
-                   if(cd.size()<0 && n.size()<0 && w.size()<0 && g.size()<0&& ii.size()<0&&bb.size()<0){
-                       return;
-                   
-                   }
-                   
-                      for (int i = 0; i < cd.size(); i++) {
-                          
-                        System.out.println(cd.get(i).getNama()+"- LV."+cd.get(i).getLevel()+"- "+cd.get(i).getUmur()+"Hari");
-                             // System.out.println("sedang lompat");
-                          
-                          
-                        }
-                     
-                     for (int i = 0; i < n.size(); i++) {
-                        System.out.println(n.get(i).getNama()+"- LV."+n.get(i).getLevel()+"- "+n.get(i).getUmur()+"Hari");
-                        
-                        }
-                     
-                     for (int i = 0; i < w.size(); i++) {
-                        System.out.println(w.get(i).getNama()+"- LV."+w.get(i).getLevel()+"- "+w.get(i).getUmur()+"Hari");
-                        
-                        }
-                     for (int i = 0; i < g.size(); i++) {
-                        System.out.println(g.get(i).getNama()+"- LV."+g.get(i).getLevel()+"- "+g.get(i).getUmur()+"Hari");
-                        
-                        }
-                     
-                     for (int i = 0; i < ii.size(); i++) {
-                        System.out.println(ii.get(i).getNama()+"- LV."+ii.get(i).getLevel()+"- "+ii.get(i).getUmur()+"Hari");
-                        
-                        }
-                     for (int i = 0; i < bb.size(); i++) {
-                        System.out.println(bb.get(i).getNama()+"- LV."+bb.get(i).getLevel()+"- "+bb.get(i).getUmur()+"Hari");
-                        
-                        }
-                     
-                    if(tam==1){
-                        for (int i = 0; i < cd.size(); i++) {
-                        System.out.println(cd.get(i).getNama()+"- LV."+cd.get(i).getLevel()+"- "+cd.get(i).getUmur()+"Hari");
-                        System.out.println("sedang lompat");
-                        }
-                        
+                
+                
+                 boolean isOwnFire = false;
+                int tem = rnd.nextInt(2)+1;
+                for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("evolusi")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
                     }
-                    if(tam==2){
-                        for (int i = 0; i < n.size(); i++) {
-                        System.out.println(n.get(i).getNama()+"- LV."+n.get(i).getLevel()+"- "+n.get(i).getUmur()+"Hari");
-                        System.out.println("sedang joget");
-                        }
-                    }
-                    if(tam==3){
-                        for (int i = 0; i < w.size(); i++) {
-                        System.out.println(w.get(i).getNama()+"- LV."+w.get(i).getLevel()+"- "+w.get(i).getUmur()+"Hari");
-                        System.out.println("sedang jalan");
-                        }
-                    }
-                     if(tam==4){
-                        for (int i = 0; i < g.size(); i++) {
-                        System.out.println(g.get(i).getNama()+"- LV."+g.get(i).getLevel()+"- "+g.get(i).getUmur()+"Hari");
+                }
+                
+                if(tem==1){
+                     for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("evolusi")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
                         System.out.println("sedang makan");
-                        }
-                     }
-                    if(tam==5){
-                        for (int i = 0; i < ii.size(); i++) {
-                        System.out.println(ii.get(i).getNama()+"- LV."+ii.get(i).getLevel()+"- "+ii.get(i).getUmur()+"Hari");
-                        System.out.println("sedang minum");
-                        }
                     }
-                    
-                    if(tam==6){
-                        for (int i = 0; i < bb.size(); i++) {
-                        System.out.println(bb.get(i).getNama()+"- LV."+bb.get(i).getLevel()+"- "+bb.get(i).getUmur()+"Hari");
+                
+                }
+              }
+                if(tem==2){
+                 for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("evolusi")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
+                        System.out.println("sedang mengunyah");
+                    }
+                 }
+ 
+              }
+                if(tem==3){
+                 for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("evolusi")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
+                        System.out.println("sedang mimpi");
+                    }
+                 }
+ 
+              }
+                if(tem==4){
+                 for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("evolusi")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
                         System.out.println("sedang melamun");
-                        }
                     }
-               }
+                 }
+ 
+              }
+                if(tem==5){
+                 for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("evolusi")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
+                        System.out.println("sedang mengunyah");
+                    }
+                 }
+ 
+              }
+                
+               if(tem==6){
+                 for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("evolusi")){
+                        isOwnFire = true;
+                        System.out.println(pokemonChilds.get(i).nama+" "+pokemonChilds.get(i).level+" "+pokemonChilds.get(i).umur);
+                        System.out.println("sedang mengaum");
+                    }
+                 }
+ 
+              }
+                
+                if(!isOwnFire){
+                    System.out.println("Tidak Punya");
+                }
+
             }
                  
             if(menu==5){
@@ -426,54 +374,64 @@ public class Tugas4 {
                         }
                         else{
                             System.out.println("anda mendapat charmander");
-                            c.add(new Charmander("Charmander",1,0));
+                           pokemonChilds.add(new Pokemonchild(1,0,"Charmander","api"));
                             //Api.jumlah +=1;
                             uang-=100;
                         }
                     }
                     if(kocok==2){
-                        System.out.println("anda mendapat vulpix");
-                        v.add(new Vulpix("Vulpix",1,0));
-                        Api.jumlah +=1;
-                        uang-=100;
-                        if(uang<0){
+                         if(uang<100){
                             System.out.println("uang tidak cukup");
                         }
+                         else{
+                            System.out.println("anda mendapat vulpix");
+                            pokemonChilds.add(new Pokemonchild(1,0,"Vulpix","api"));
+
+                            uang-=100;
+                      }
                     }
                     if(kocok==3){
-                        System.out.println("anda mendapatkan squirtle");
-                        ss.add(new Squirtle("Squirtle",1,0));
-                        Api.jumlah+=1;
-                        uang-=100;
-                        if(uang<0){
+                         if(uang<100){
                             System.out.println("uang tidak cukup");
                         }
+                         else{
+                        System.out.println("anda mendapatkan squirtle");
+                        pokemonChilds.add(new Pokemonchild(1,0,"Squirtle","air"));
+                    
+                        uang-=100;
+                         }
                     }
                     if(kocok==4){
-                        System.out.println("anda mendapatkan magikarp");
-                        m.add(new Magikarp("Magikarp",1,0));
-                        Api.jumlah+=1;
-                        uang-=100;
-                        if(uang<0){
+                         if(uang<100){
                             System.out.println("uang tidak cukup");
                         }
+                         else{
+                        System.out.println("anda mendapatkan magikarp");
+                         pokemonChilds.add(new Pokemonchild(1,0,"magikarp","air"));
+                        
+                        uang-=100;
+                         }
                     }
                     if(kocok==5){
-                        System.out.println("anda mendapatkan bulbasaur");
-                        b.add(new Bulbasaur("Bulbasaur",1,0));
-                        Api.jumlah+=1;
-                        uang-=100;
-                        if(uang<0){
+                        if(uang<100){
                             System.out.println("uang tidak cukup");
+                        }
+                        else{
+                        System.out.println("anda mendapatkan bulbasaur");
+                        pokemonChilds.add(new Pokemonchild(1,0,"bulbasaur","rumput"));
+                        
+                        uang-=100;
                         }
                     }
                     if(kocok==6){
-                        System.out.println("anda mendapatkan chikorita");
-                        cc.add(new Chikorita("Chikorita",1,0));
-                        Api.jumlah+=1;
-                        uang-=100;
-                        if(uang<0){
+                        if(uang<100){
                             System.out.println("uang tidak cukup");
+                        }
+                        else{
+                        System.out.println("anda mendapatkan chikorita");
+                         pokemonChilds.add(new Pokemonchild(1,0,"chikorita","rumput"));
+                        
+                        uang-=100;
                         }
                     }
                     
@@ -481,193 +439,299 @@ public class Tugas4 {
                 if(pil==2){
                       int buat = rnd.nextInt(20)+1;
                     if(buat==1){
-                        System.out.println("anda mendapat charmander");
-                        c.add(new Charmander("Charmander",1,0));
-                        Api.jumlah +=1;
-                        
-                        System.out.println("anda mendapat vulpix");
-                        v.add(new Vulpix("Vulpix",1,0));
-                        Api.jumlah +=1;
-                       uang-=250;
+                         if(uang<100){
+                            System.out.println("uang tidak cukup");
+                        }
+                         else{
+                            System.out.println("anda mendapat charmander");
+                             pokemonChilds.add(new Pokemonchild(1,0,"charmander","api"));
+
+
+                            System.out.println("anda mendapat vulpix");
+                             pokemonChilds.add(new Pokemonchild(1,0,"vuplix","api"));
+
+                             uang-=250;
+                      }
                     }
                     if(buat==2){
-                        System.out.println("anda mendapatkan squirtle");
-                        ss.add(new Squirtle("Squirtle",1,0));
-                        Air.jumlah+=1;
-                        
-                        System.out.println("anda mendapatkan magikarp");
-                        m.add(new Magikarp("Magikarp",1,0));
-                        Air.jumlah+=1;
-                    uang-=250;
-                    }
+                         if(uang<100){
+                            System.out.println("uang tidak cukup");
+                        }
+                         else{
+                            System.out.println("anda mendapatkan squirtle");
+                             pokemonChilds.add(new Pokemonchild(1,0,"squirtle","air"));
+
+                            System.out.println("anda mendapatkan magikarp");
+                            pokemonChilds.add(new Pokemonchild(1,0,"magikarp","air"));
+
+                             uang-=250;
+                         }
+                   }
                     if(buat==3){
-                         System.out.println("anda mendapatkan bulbasaur");
-                        b.add(new Bulbasaur("Bulbasaur",1,0));
-                        Rumput.jumlah+=1;
-                        
-                        System.out.println("anda mendapatkan chikorita");
-                        cc.add(new Chikorita("Chikorita",1,0));
-                        Rumput.jumlah+=1;
-                    uang-=250;
+                         if(uang<100){
+                            System.out.println("uang tidak cukup");
+                        }
+                         else{
+                            System.out.println("anda mendapatkan bulbasaur");
+                           pokemonChilds.add(new Pokemonchild(1,0,"bulbasaur","rumput"));
+
+
+                           System.out.println("anda mendapatkan chikorita");
+                            pokemonChilds.add(new Pokemonchild(1,0,"chikorita","rumput"));
+
+                           uang-=250;
+                        }
                     }
                     
                     if(buat==4){
-                         System.out.println("anda mendapat charmander");
-                        c.add(new Charmander("Charmander",1,0));
-                        Api.jumlah +=1;
-                        
-                        
-                        System.out.println("anda mendapatkan squirtle");
-                        ss.add(new Squirtle("Squirtle",1,0));
-                        Air.jumlah+=1;
-                        uang-=250;
+                        if(uang<100){
+                            System.out.println("uang tidak cukup");
+                        }
+                        else{
+                          System.out.println("anda mendapat charmander");
+                          pokemonChilds.add(new Pokemonchild(1,0,"charmander","api"));
+                           
+                           System.out.println("anda mendapatkan squirtle");
+                           pokemonChilds.add(new Pokemonchild(1,0,"squirtle","air"));
+                           
+                           uang-=250;
+                      }
                     }
                     
                     if(buat==5){
-                    
-                        System.out.println("anda mendapat charmander");
-                        c.add(new Charmander("Charmander",1,0));
-                        Api.jumlah +=1;
-                        
-                        System.out.println("anda mendapatkan magikarp");
-                        m.add(new Magikarp("Magikarp",1,0));
-                        Air.jumlah+=1;
-                        uang-=250;
+                        if(uang<100){
+                            System.out.println("uang tidak cukup");
+                        }
+                        else{
+                            System.out.println("anda mendapat charmander");
+                             pokemonChilds.add(new Pokemonchild(1,0,"charmander","api"));
+
+
+                            System.out.println("anda mendapatkan magikarp");
+                            pokemonChilds.add(new Pokemonchild(1,0,"magikarp","air"));
+                           
+                            uang-=250;
+                        }
                     }
                     
                     if(buat==6){
-                        System.out.println("anda mendapat vulpix");
-                        v.add(new Vulpix("Vulpix",1,0));
-                        Api.jumlah +=1;
-                        
-                        System.out.println("anda mendapatkan squirtle");
-                        ss.add(new Squirtle("Squirtle",1,0));
-                        Air.jumlah+=1;
-                        uang-=250;
+                         if(uang<100){
+                            System.out.println("uang tidak cukup");
+                        }
+                         else{
+                            System.out.println("anda mendapat vulpix");
+                           pokemonChilds.add(new Pokemonchild(1,0,"vuplix","api"));
+
+
+                            System.out.println("anda mendapatkan squirtle");
+                          pokemonChilds.add(new Pokemonchild(1,0,"squirtle","air"));
+
+                            uang-=250;
+                       }
                     }
                     
                     if(buat==7){
-                        System.out.println("anda mendapat vulpix");
-                        v.add(new Vulpix("Vulpix",1,0));
-                        Api.jumlah +=1;
-                        
-                        System.out.println("anda mendapatkan magikarp");
-                        m.add(new Magikarp("Magikarp",1,0));
-                        Air.jumlah+=1;
-                        uang-=250;
+                         if(uang<100){
+                            System.out.println("uang tidak cukup");
+                        }
+                         else{
+                            System.out.println("anda mendapat vulpix");
+                            pokemonChilds.add(new Pokemonchild(1,0,"vuplix","api"));
+
+
+                            System.out.println("anda mendapatkan magikarp");
+                             pokemonChilds.add(new Pokemonchild(1,0,"magikarp","air"));
+
+                            uang-=250;
+                       }
                     }
                     
                     if(buat==8){
-                        System.out.println("anda mendapatkan squirtle");
-                        ss.add(new Squirtle("Squirtle",1,0));
-                        Air.jumlah+=1;
-                        
-                        System.out.println("anda mendapatkan bulbasaur");
-                        b.add(new Bulbasaur("Bulbasaur",1,0));
-                        Rumput.jumlah+=1;
-                        uang-=250;
+                        if(uang<100){
+                            System.out.println("uang tidak cukup");
+                        }
+                        else{
+                            System.out.println("anda mendapatkan squirtle");
+                            pokemonChilds.add(new Pokemonchild(1,0,"squirtle","air"));
 
+
+                            System.out.println("anda mendapatkan bulbasaur");
+                            pokemonChilds.add(new Pokemonchild(1,0,"bulbasaur","rumput"));
+
+                            uang-=250;
+                       }
                     }
                     if(buat==9){
-                          System.out.println("anda mendapatkan magikarp");
-                        m.add(new Magikarp("Magikarp",1,0));
-                        Air.jumlah+=1;
-                        
-                         System.out.println("anda mendapatkan bulbasaur");
-                        b.add(new Bulbasaur("Bulbasaur",1,0));
-                        Rumput.jumlah+=1;
-                        uang-=250;
-                    
+                        if(uang<100){
+                            System.out.println("uang tidak cukup");
+                        }
+                        else{
+                                System.out.println("anda mendapatkan magikarp");
+                             pokemonChilds.add(new Pokemonchild(1,0,"magikarp","air"));
+
+
+                               System.out.println("anda mendapatkan bulbasaur");
+                             pokemonChilds.add(new Pokemonchild(1,0,"bulbasaur","rumput"));
+
+                              uang-=250;
+                        }
                     }
                     
                     if(buat==10){
-                        System.out.println("anda mendapatkan squirtle");
-                        ss.add(new Squirtle("Squirtle",1,0));
-                        Air.jumlah+=1;
-                        
-                        System.out.println("anda mendapatkan chikorita");
-                        cc.add(new Chikorita("Chikorita",1,0));
-                        Rumput.jumlah+=1;
-                        uang-=250;
-                    
+                         if(uang<100){
+                            System.out.println("uang tidak cukup");
+                        }
+                         else{
+                            System.out.println("anda mendapatkan squirtle");
+                            pokemonChilds.add(new Pokemonchild(1,0,"squirtle","air"));
+
+
+                            System.out.println("anda mendapatkan chikorita");
+                           pokemonChilds.add(new Pokemonchild(1,0,"chikorita","rumput"));
+
+                            uang-=250;
+                       }
                     }
                     if(buat==11){
-                         System.out.println("anda mendapatkan magikarp");
-                        m.add(new Magikarp("Magikarp",1,0));
-                        Air.jumlah+=1;
-                        
-                         System.out.println("anda mendapatkan chikorita");
-                        cc.add(new Chikorita("Chikorita",1,0));
-                        Rumput.jumlah+=1;
-                        uang-=250;
-                    
+                         if(uang<100){
+                            System.out.println("uang tidak cukup");
+                        }
+                         else{
+                            System.out.println("anda mendapatkan magikarp");
+                          pokemonChilds.add(new Pokemonchild(1,0,"magikarp","air"));
+
+
+                            System.out.println("anda mendapatkan chikorita");
+                            pokemonChilds.add(new Pokemonchild(1,0,"chikorita","rumput"));
+
+                           uang-=250;
+                       }
                     }
-                    
-                
+
                 }
                 if(pil==3){
                     int besar= rnd.nextInt(6)+1;
                     if(besar==1){
-                        System.out.println("anda mendapatkan pokemon evolusi charmeleon");
-                        cd.add(new Charmeleon("Chikorita",1,0));
-                        uang-=350;
+                          if(uang<350){
+                            System.out.println("uang tidak cukup");
+                        }
+                          else{
+                            System.out.println("anda mendapatkan pokemon evolusi charmeleon");
+                             pokemonChilds.add(new Pokemonchild(1,0,"charmeleon","evolusi"));
+                            uang-=350;
+                       }
                     }
                     if(besar==2){
-                         System.out.println("anda mendapatkan pokemon evolusi ninetales");
-                        n.add(new Ninetales("Ninetales",1,0));
-                        uang-=350;
+                         if(uang<350){
+                            System.out.println("uang tidak cukup");
+                        }
+                          else{
+                            System.out.println("anda mendapatkan pokemon evolusi ninetales");
+                           pokemonChilds.add(new Pokemonchild(1,0,"ninetales","evolusi"));
+                           uang-=350;
+                         }
                     }
                     if(besar==3){
-                        System.out.println("anda mendapatkan pokemon evolusi wartortle");
-                        w.add(new Wartortle("Wartortle",1,0));
-                        uang-=350;
+                         if(uang<350){
+                            System.out.println("uang tidak cukup");
+                        }
+                         else{
+                            System.out.println("anda mendapatkan pokemon evolusi wartortle");
+                            pokemonChilds.add(new Pokemonchild(1,0,"wartortle","evolusi"));
+                            uang-=350;
+                         }
                     }
                     if(besar==4){
-                        System.out.println("anda mendapatkan pokemon evolusi gyarados");
-                        g.add(new Gyarados("Gyarados",1,0));
-                        uang-=350;
+                        if(uang<350){
+                            System.out.println("uang tidak cukup");
+                        }
+                        else{
+                            System.out.println("anda mendapatkan pokemon evolusi gyarados");
+                              pokemonChilds.add(new Pokemonchild(1,0,"gyarados","evolusi"));
+                            uang-=350;
+                        }
                     }
                     if(besar==5){
-                        System.out.println("anda mendapatkan pokemon evolusi ivysaur");
-                        ii.add(new Ivysaur("Ivysaur",1,0));
-                        uang-=350;
-                    
+                         if(uang<350){
+                            System.out.println("uang tidak cukup");
+                        }
+                         else{
+                            System.out.println("anda mendapatkan pokemon evolusi ivysaur");
+                          pokemonChilds.add(new Pokemonchild(1,0,"ivysaur","evolusi"));
+                            uang-=350;
+                       }
                     }
                     if(besar==6){
-                        System.out.println("anda mendapatkan pokemon evolusi bayleef");
-                        bb.add(new Bayleef("Bayleef",1,0));
-                        uang-=350;
-                    
+                         if(uang<350){
+                            System.out.println("uang tidak cukup");
+                        }
+                         else{
+                            System.out.println("anda mendapatkan pokemon evolusi bayleef");
+                           pokemonChilds.add(new Pokemonchild(1,0,"bayleef","evolusi"));
+                            uang-=350;
+                      }
                     }
                   
-                   }
+                 }
             
-            }
+              }
             if(menu==6){
                 System.out.println("1. Pertunjukkan Atraksi Api");
                 System.out.println("2. Pertunjukkan Atraksi Air");
                 System.out.println("3. Pertunjukkan Atraksi Rumput");
                 System.out.println("4. Pertunjukkan Atraksi Evolusi");
                 lihat = s.nextInt();
-                
-                
-                
+         
                 if(lihat==1){
-                    int lead = -1;
-                    Charmander charm;
-                    Vulpix ba;
-                    for (int i = 0; i < c.size(); i++) {
-                        if(lead < c.get(i).getLevel()){
-                            lead = c.get(i).getLevel();
-                            charm = c.get(i);
+                    int jumlah=0;
+                    int ctr=-1;
+                    int a =-1;
+                    int index=0;
+                    for (int i = 0; i < pokemonChilds.size(); i++) {
+                    if(pokemonChilds.get(i).getElemen().equals("api")){
+                        
+                        jumlah++;
+                    }      
+                 }
+                    if(jumlah>2){
+                        for (int i = 0; i < pokemonChilds.size(); i++) {
+                           
+                            if(pokemonChilds.get(i).getLevel()>ctr ||pokemonChilds.get(i).getLevel()>a ){
+                                ctr= pokemonChilds.get(i).getLevel();
+                                a = pokemonChilds.get(i).getLevel();
+                                index=i;
+                                System.out.println(pokemonChilds.get(index).nama+" "+pokemonChilds.get(index).level);
+                                System.out.println("memimpin pertunjukan");
+                                System.out.println(pokemonChilds.get(index).nama+" "+pokemonChilds.get(index).level);
+                                System.out.println("melakukan Fire dance dengan indah");
+                              
+                            }
+                    
                         }
                     }
-                    for (int i = 0; i < v.size(); i++) {
-                        if(lead < v.get(i).getLevel()){
-                            lead = v.get(i).getLevel();
-                            ba = v.get(i);
-                        }
-                    }
+                    
+               
+                    
+                    
+                    
+//                   System.out.println("Sebelum Evolve : ");
+//                for (int i = 0; i < pokemonChilds.size(); i++) {
+//                    System.out.println(pokemonChilds.get(i).nama);
+//                }
+//                
+//                //cetak ataksi sebelum evolve
+//                pokemonChilds.get(0).atraksi();
+//                
+//                //cara evolve
+//                pokemonChilds.get(0).evolve();
+//                
+//                //hasil evolve
+//                System.out.println("Setelah Evolve : ");
+//                System.out.println(pokemonChilds.get(0).nama);
+//                
+//                //cetak ataksi sesudah evolve
+//                pokemonChilds.get(0).atraksi();
+//                
                     
                    
                 
@@ -682,8 +746,8 @@ public class Tugas4 {
           }
         
       }
-    
-  }
+}
+  
 
     
 
