@@ -134,6 +134,11 @@ public class Tugas4 {
 //             c.add(new Charmander("Charmander",1,0));
 //             v.add(new Vulpix("Vulpix",1,0));
 
+            if(menu == 10){
+                pokemonChilds.add(new Pokemonchild(0, 0, "charmander","api"));
+                pokemonChilds.add(new Pokemonchild(0, 0, "charmander","api"));
+            }
+
             if(menu == 9){
                 //Cara add pokemon
                 pokemonChilds.add(new Pokemonchild(0, 0, "charmander","api"));
@@ -685,29 +690,38 @@ public class Tugas4 {
                 if(lihat==1){
                     int jumlah=0;
                     int ctr=-1;
-                    int a =-1;
                     int index=0;
-                    for (int i = 0; i < pokemonChilds.size(); i++) {
-                    if(pokemonChilds.get(i).getElemen().equals("api")){
-                        
-                        jumlah++;
-                    }      
-                 }
-                    if(jumlah>2){
-                        for (int i = 0; i < pokemonChilds.size(); i++) {
-                           
-                            if(pokemonChilds.get(i).getLevel()>ctr ||pokemonChilds.get(i).getLevel()>a ){
-                                ctr= pokemonChilds.get(i).getLevel();
-                                a = pokemonChilds.get(i).getLevel();
-                                index=i;
-                                System.out.println(pokemonChilds.get(index).nama+" "+pokemonChilds.get(index).level);
-                                System.out.println("memimpin pertunjukan");
-                                System.out.println(pokemonChilds.get(index).nama+" "+pokemonChilds.get(index).level);
-                                System.out.println("melakukan Fire dance dengan indah");
-                              
-                            }
                     
+                    for (int i = 0; i < pokemonChilds.size(); i++) {
+                        if(pokemonChilds.get(i).getElemen().equals("api") && !pokemonChilds.get(i).isIsEvolve()){
+                            jumlah++;
+                        }      
+                    }
+
+                    if(jumlah >= 2){
+                        for (int i = 0; i < pokemonChilds.size(); i++) {
+                            if(ctr < pokemonChilds.get(i).getLevel()){
+                                ctr = pokemonChilds.get(i).getLevel();
+                                index = i;
+                            }
                         }
+                        
+                       
+                        for (int i = 0; i < pokemonChilds.size(); i++) {
+                            if(ctr == i){
+                                //Yang Mimpin
+                                System.out.println(pokemonChilds.get(i).getNama() + " memimpin");
+                            }
+                            
+                            //Ataraksinya
+                            System.out.print(pokemonChilds.get(i).getNama() + " melakukan atraksi ");
+                            pokemonChilds.get(i).atraksi();
+                            System.out.println();
+                        }
+                        
+                    }
+                    else{
+                        System.out.println("TIdak ada Pokemon");
                     }
                     
                

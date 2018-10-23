@@ -38,6 +38,10 @@ public class Pokemonchild extends Pokemon{
     public String getElemen() {
         return elemen;
     }
+
+    public boolean isIsEvolve() {
+        return isEvolve;
+    }
     
     public void evolve(){
         for (int i = 0; i < dataPokemon.length; i++) {
@@ -61,14 +65,11 @@ public class Pokemonchild extends Pokemon{
             case "api":
                 System.out.println("Fire Dance");
                 break;
-             case "air":
+            case "air":
                 System.out.println("Water Blast");
                 break;
-             case "rumput":
+            case "rumput":
                 System.out.println("Frenzy Plant");
-                break;
-                 case "evolusi":
-                System.out.println("Lunar Dance");
                 break;
         }
     }
