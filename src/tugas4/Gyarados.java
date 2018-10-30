@@ -11,8 +11,13 @@ package tugas4;
  */
 public class Gyarados extends Magikarp {
     
-    public Gyarados(String nama, int level, int umur) {
-        super(nama, level, umur);
+    public Gyarados(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
     
+   
+    
+  
+    
+   
 }

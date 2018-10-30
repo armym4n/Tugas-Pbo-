@@ -11,9 +11,15 @@ package tugas4;
  */
 public class Ninetales extends Vulpix {
     
-    public Ninetales(String nama, int level, int umur) {
-        super(nama, level, umur);
+    public Ninetales(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
+    
+   
+    
+   
+    
+   
     
    
     

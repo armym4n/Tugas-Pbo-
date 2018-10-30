@@ -9,15 +9,20 @@ package tugas4;
  *
  * @author Asus
  */
-public class Charmander extends Pokemon {
+public class Charmander extends Api {
     private boolean atraksi;
     private String elemen = "api";
-    
-    
-    public Charmander(String nama, int level, int umur) {
-        super(level, umur, nama);
+
+    public Charmander(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
 
+    
+
+    
+    
+    
+   
     public boolean isAtraksi() {
         return atraksi;
     }

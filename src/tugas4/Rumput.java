@@ -9,18 +9,20 @@ package tugas4;
  *
  * @author Asus
  */
-public class Rumput {
+public class Rumput extends Pokemonchild {
       protected String nama;
       protected int level,umur;
     public static int jumlah;
 
-    public Rumput(String nama, int level, int umur) {
-        this.nama = nama;
-        this.level = level;
-        this.umur = umur;
+    public Rumput(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
 
-    
+   
+   
+
+   
+
     public String getNama() {
         return nama;
     }
@@ -44,6 +46,16 @@ public class Rumput {
     public void setUmur(int umur) {
         this.umur = umur;
     }
+
+    public static int getJumlah() {
+        return jumlah;
+    }
+
+    public static void setJumlah(int jumlah) {
+        Rumput.jumlah = jumlah;
+    }
+
+   
     
     
 

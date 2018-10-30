@@ -11,30 +11,27 @@ import java.util.ArrayList;
  *
  * @author Asus
  */
-public class Api {
+public class Api extends Pokemonchild {
     protected int level,umur;
     protected String nama;
     public static int jumlah;
     public static ArrayList<Api> arr;
-    public Api(String nama,int level, int umur ) {
-        this.level = 1;
-        this.umur = 0;
-        this.nama = nama;
-        arr = new ArrayList<Api>();
+
+    public Api(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
+
+   
+
+   
+
+    
+  
     public void addjumlah(int i)
     {
         this.jumlah +=1;
     }
-    
 
-   
-        
-    
-    
-    
-    
-    
     public int getLevel() {
         return level;
     }
@@ -58,6 +55,22 @@ public class Api {
     public void setNama(String nama) {
         this.nama = nama;
     }
+
+    public static int getJumlah() {
+        return jumlah;
+    }
+
+    public static void setJumlah(int jumlah) {
+        Api.jumlah = jumlah;
+    }
+
+    
+
+   
+        
+    
+    
+    
     
     
 }

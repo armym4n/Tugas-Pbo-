@@ -11,8 +11,13 @@ package tugas4;
  */
 public class Magikarp extends Air {
     
-    public Magikarp(String nama, int level, int umur) {
-        super(nama, level, umur);
+    public Magikarp(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
+    
+    
+    
+   
+   
     
 }

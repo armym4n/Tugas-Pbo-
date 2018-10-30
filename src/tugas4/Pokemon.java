@@ -10,9 +10,8 @@ package tugas4;
  * @author Asus
  */
 public class Pokemon {
-    protected int level;
-    protected int umur;
-    protected String nama;
+    protected String nama,elemen;
+    protected int level,umur;
 
     public Pokemon(int level, int umur, String nama) {
         this.level = level;

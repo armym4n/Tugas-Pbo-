@@ -11,8 +11,14 @@ package tugas4;
  */
 public class Chikorita extends Rumput {
     
-    public Chikorita(String nama, int level, int umur) {
-        super(nama, level, umur);
+    public Chikorita(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
+    
+   
+    
+   
+    
+   
     
 }

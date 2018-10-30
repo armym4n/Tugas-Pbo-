@@ -9,20 +9,21 @@ package tugas4;
  *
  * @author Asus
  */
-public class Air {
+public class Air extends Pokemonchild {
      protected String nama;
      protected int level,umur;
     public static int jumlah;
 
-    public Air(String nama, int level, int umur) {
-        this.nama = nama;
-        this.level = level;
-        this.umur = umur;
+    public Air(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
 
    
-    
-    
+
+   
+
+   
+
     public String getNama() {
         return nama;
     }
@@ -46,7 +47,19 @@ public class Air {
     public void setUmur(int umur) {
         this.umur = umur;
     }
+
+    public static int getJumlah() {
+        return jumlah;
+    }
+
+    public static void setJumlah(int jumlah) {
+        Air.jumlah = jumlah;
+    }
+
+   
+
+   
     
     
-    
+   
 }

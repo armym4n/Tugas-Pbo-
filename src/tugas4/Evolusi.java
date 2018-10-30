@@ -9,16 +9,20 @@ package tugas4;
  *
  * @author Asus
  */
-public class Evolusi {
+public class Evolusi extends Pokemonchild {
      private int level,umur;
     private String nama;
     public static int jumlah;
 
-    public Evolusi(int level, int umur, String nama) {
-        this.level = level;
-        this.umur = umur;
-        this.nama = nama;
+    public Evolusi(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
+
+   
+
+   
+
+   
 
     
     

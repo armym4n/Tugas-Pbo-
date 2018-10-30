@@ -11,10 +11,15 @@ package tugas4;
  */
 public class Vulpix extends Api {
     private boolean atraksi;
-    public Vulpix(String nama, int level, int umur) {
-        super(nama, level, umur);
+
+    public Vulpix(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
 
+    
+
+   
+   
     public boolean isAtraksi() {
         return atraksi;
     }

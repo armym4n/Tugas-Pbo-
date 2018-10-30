@@ -34,6 +34,9 @@ public class Pokemonchild extends Pokemon{
         dataPokemon[5][0] = "chikorita";
         dataPokemon[5][1] = "bayleef";
     }
+    
+    
+    
 
     public String getElemen() {
         return elemen;

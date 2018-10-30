@@ -11,8 +11,14 @@ package tugas4;
  */
 public class Ivysaur extends Bulbasaur {
     
-    public Ivysaur(String nama, int level, int umur) {
-        super(nama, level, umur);
+    public Ivysaur(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
+    
+    
+    
+    
+    
+    
     
 }

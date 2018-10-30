@@ -11,10 +11,15 @@ package tugas4;
  */
 public class Charmeleon extends Charmander {
     
-    public Charmeleon(String nama, int level, int umur) {
-        super(nama, level, umur);
+    public Charmeleon(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
     
+   
+    
+    
+    
+   
    
     
 }

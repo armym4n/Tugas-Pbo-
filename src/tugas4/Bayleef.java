@@ -11,8 +11,12 @@ package tugas4;
  */
 public class Bayleef extends Chikorita {
     
-    public Bayleef(String nama, int level, int umur) {
-        super(nama, level, umur);
+    public Bayleef(int level, int umur, String nama, String elemen) {
+        super(level, umur, nama, elemen);
     }
+    
+   
+    
+   
     
 }
